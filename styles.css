@@ -5,72 +5,112 @@ body {
 }
 @keyframes loader{
   
+
+  
   0%{
-    border:1px solid grey;
-    border-radius:90%;
-    opacity: 1;
     
+    
+    opacity: 1;
     background: #b90ea3 no-repeat center;
     background-image: url("images/logo/ohmyfood.png");
-    height: 300px;
-    width:300px;
+    height: 100%;
+    width:100%;
+    z-index: 1000000;
+
     
   
   }
   10%{
+  
+    transition: scale 2s,background-color 2s ;
     border: 1px solid #281c5e;
     background: #662e14 no-repeat center;
     background-image: url(images/logo/ohmyfood.png);
     opacity: 0.75;
+    scale:0.9;
+    z-index: 1000000;
   }
   25%{
-      border:1px solid white;
-      border-radius:75%;
-      transform: rotate(10deg);
-      opacity: 1;
+    transition: width 1s,height 1s ,background-color 1s ;
+      
+    transform: rotate(10deg);
+    opacity: 0.80;
+      
    
    background:lightcoral no-repeat center;
    background-image: url("images/logo/ohmyfood.png");
+   z-index: 1000000;
   }
   45%{
-      border:1px solid black;
-      border-radius: 50%;
-      transform: rotate(25deg);
-      opacity: 0.75;
+      
+      
+    transform: rotate(25deg);
+    opacity: 0.75;
+    transition: scale 1s,height 1s ,background-color 1s ;
+    transform-origin: left;
+    transform: scale(0.3);
+      
     
     background:blueviolet no-repeat center;
     background-image: url("images/logo/ohmyfood.png");
+    z-index: 1000000;
   }
   75%{
-    border:1px solid yellow;
-    border-radius: 40%;
+    
+    
     transform:rotate(320deg);
     opacity:0.5;
+    transition: scale 1s,height 1s ,background-color 1s ;
+    transform:scale 0.8;
+    
     
     background:#FF79DA no-repeat center;
     background-image: url("images/logo/ohmyfood.png");
+    z-index: 1000000;
   }
-  100%{
-    border:1px solid rgb(37, 18, 18);
+  99%{
+    
     border-radius:30%;
     opacity:0.3;
+    transition: scale 1s,height 1s ,background-color 1s ;
+    transform: scale(1);
+    transform-origin: center;
+    
     
     background:blue no-repeat center;
     background-image: url("images/logo/ohmyfood.png");
+    z-index: 1000000;
+  
+    
   }
+  100%{z-index: -1;
+    opacity: 0;
+
+  }
+  
+  
+
+  
 }
 
+
 .loader {
+  
   margin:auto;
-  position: fixed;
   width:100%;
   height: 100%;
-  background-color: azure;
+  transition-delay: 5s;
   overflow: hidden;
-  animation:loader 5s alternate cubic-bezier(1,-0.93, 0, 1.57) ;
+  position:fixed;
+  animation: loader  7s cubic-bezier(1,-0.93, 0, 1.57) ;
+  animation-fill-mode:forwards;
+  z-index: 1000000;
   
   
 }
+
+
+
 
 #acceuil{
   display:grid;
@@ -82,28 +122,96 @@ body {
                       ;
 }
 .main-header{
-      grid-area: header;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      height: 62px;
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 62px;
+  box-shadow: 0 0 0.5em #28252570;
+  position:relative;
 }
+  
       
 .logo{
-          display:flex;
-          justify-content:center;
-          align-items: center;
-          width:50%;
-          
-
-      }
+  display:flex;
+  justify-content:center;
+  margin:auto;
+  grid-column: 2/3;
+  width:100%;
 
   
-  main{
+  
+
+}
+.logo img{
+width:16em;
+
+
+}
+
+main{
       grid-area: main;
-  }
-  footer{
+}
+footer{
       grid-area:footer;
-  }
+}
+.localisation{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+ height:3.5em;
+
+ 
+  background-color:#Eaeaea ;
+  
+}
+.presentation{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 3.5em;
+  background-color: #FAFAFA;
+  height: 290px;
+}
+.presentation_btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space:nowrap;
+  color: #Eaeaea;
+  font-weight: bold;
+  width:202px;
+  height:51px;
+  background: linear-gradient(#ee60ff, #ab4cff);
+  border:transparent ;
+  border-radius: 2em;
+}
+.presentation_btn:hover
+{
+  transform: scale(1.1);
+  transition:box-shadow 0.5s scale 0.5s opacity 0.5s;
+  opacity: 0.9;
+  box-shadow: 0 0 0.5em black;
+}
+.fonctionnement{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height:440px;
+}
+.fonctionnement ol{
+  display:flex ;
+  flex-direction: column;
+  list-style:none;
+  justify-content: space-around;
+  
+
+}
+.restaurant-cards img{
+  width:80%;
+  height:174px;
+}
 
 
   
