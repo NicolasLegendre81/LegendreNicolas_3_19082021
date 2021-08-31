@@ -114,7 +114,7 @@ body {
 
 #acceuil{
   display:grid;
-  grid-template-rows: 1fr,8fr,1fr;
+  grid-template-columns: 100%;
   height: 100%;
   grid-template-areas: "header"
                        "main"
@@ -155,14 +155,15 @@ footer{
       grid-area:footer;
 }
 .localisation{
-  display:flex;
-  align-items:center;
-  justify-content: center;
- height:3.5em;
-
- 
-  background-color:#Eaeaea ;
+display:flex;
+align-items:center;
+justify-content: center;
+height:3.5em;
+background-color:#Eaeaea ;
   
+}
+.localisation i{
+  margin-right: 1em;
 }
 .presentation{
   display: flex;
@@ -170,7 +171,7 @@ footer{
   text-align: center;
   justify-content: center;
   align-items: center;
-  padding: 3.5em;
+  padding: 0 1em;
   background-color: #FAFAFA;
   height: 290px;
 }
@@ -183,31 +184,81 @@ footer{
   font-weight: bold;
   width:202px;
   height:51px;
+  margin: 2em;
   background: linear-gradient(#ee60ff, #ab4cff);
   border:transparent ;
   border-radius: 2em;
+  box-shadow: 0 0 0.5em black;
 }
 .presentation_btn:hover
 {
   transform: scale(1.1);
   transition:box-shadow 0.5s scale 0.5s opacity 0.5s;
   opacity: 0.9;
-  box-shadow: 0 0 0.5em black;
+  box-shadow: 0 0 0.8em black;
 }
 .fonctionnement{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  height:440px;
-}
-.fonctionnement ol{
-  display:flex ;
-  flex-direction: column;
-  list-style:none;
-  justify-content: space-around;
   
+  width:100%;
+  height:450px;
+  
+}
+
+.grid-fnct {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap:20px;
+  margin: 30px;
 
 }
+.fnct-btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height:75px;
+  background: #f6f6f6;
+  border-radius: 2em;
+  position: relative;
+  border: none;
+  box-shadow: 0 0 1em #a5a3a3;
+}
+.fnct-btn:hover{
+  transition: background-color 0.5s color 0.5s;
+  background-color:#f5edff;
+  color:#9356dc;
+  
+}
+
+
+.fnct-btn p {
+  display: flex;
+  flex-direction: row;
+  height: 25px;
+  width: 25px;
+  color: black;
+  position: absolute;
+  border-radius: 100%;
+  left:-10.5px;
+  background: #9356dc;
+  align-items: center;
+  justify-content: center;
+}
+.fnct-btn p{
+  color:black;
+
+}
+.fnct .fas {
+  padding-right:2em
+}
+.fnct strong{
+  color:black;
+}
+.fnct strong:hover{
+  color:black;
+}
+
 .restaurant-cards img{
   width:80%;
   height:174px;
