@@ -239,7 +239,7 @@ background-color:#Eaeaea ;
 }
 
 
-.fnct-btn p {
+.fnct-btn span {
   display: flex;
   flex-direction: row;
   height: 25px;
@@ -252,7 +252,7 @@ background-color:#Eaeaea ;
   align-items: center;
   justify-content: center;
 }
-.fnct-btn p{
+.fnct-btn span{
   color:black;
 
 }
