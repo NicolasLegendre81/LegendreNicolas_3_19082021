@@ -10,6 +10,18 @@ a{
 p{
   margin: 0;
 }
+h3{
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+
+}
+h4{
+  margin:0;
+}
+.section-title{
+  margin-left:20px;
+}
 @keyframes loader{
   
 
@@ -19,7 +31,8 @@ p{
     
     opacity: 1;
     background: #b90ea3 no-repeat center;
-    background-image: url("images/logo/ohmyfood.png");
+    
+    object-fit: cover;
     height: 100%;
     width:100%;
     z-index: 1000000;
@@ -32,7 +45,8 @@ p{
     transition: scale 2s,background-color 2s ;
     border: 1px solid #281c5e;
     background: #662e14 no-repeat center;
-    background-image: url(images/logo/ohmyfood.png);
+    
+    object-fit: cover;
     opacity: 0.75;
     scale:0.9;
     z-index: 1000000;
@@ -41,11 +55,13 @@ p{
     transition: width 1s,height 1s ,background-color 1s ;
       
     transform: rotate(10deg);
+    object-fit: cover;
     opacity: 0.80;
       
    
    background:lightcoral no-repeat center;
-   background-image: url("images/logo/ohmyfood.png");
+   
+   object-fit: cover;
    z-index: 1000000;
   }
   45%{
@@ -59,7 +75,7 @@ p{
       
     
     background:blueviolet no-repeat center;
-    background-image: url("images/logo/ohmyfood.png");
+    
     z-index: 1000000;
   }
   75%{
@@ -72,7 +88,8 @@ p{
     
     
     background:#FF79DA no-repeat center;
-    background-image: url("images/logo/ohmyfood.png");
+    
+    object-fit: cover;
     z-index: 1000000;
   }
   99%{
@@ -85,7 +102,8 @@ p{
     
     
     background:blue no-repeat center;
-    background-image: url("images/logo/ohmyfood.png");
+    
+    object-fit: cover;
     z-index: 1000000;
   
     
@@ -102,8 +120,11 @@ p{
 
 
 .loader {
+  display:flex;
+  justify-content: center;
+  align-items: center;
   
-  margin:auto;
+  margin:0;
   width:100%;
   height: 100%;
   transition-delay: 5s;
@@ -150,7 +171,7 @@ p{
 
 }
 .logo img{
-width:16em;
+width:10.2em;
 
 
 }
@@ -168,6 +189,12 @@ justify-content: center;
 height:3.5em;
 background-color:#Eaeaea ;
   
+}
+.localisation div{
+  display:flex;
+  align-items:center;
+  font-size:16px;
+  font-weight: 400;
 }
 .localisation i{
   margin-right: 1em;
@@ -207,7 +234,7 @@ background-color:#Eaeaea ;
 .fonctionnement{
   
   width:100%;
-  height:450px;
+  
   
 }
 
@@ -244,7 +271,7 @@ background-color:#Eaeaea ;
   flex-direction: row;
   height: 25px;
   width: 25px;
-  color: black;
+  color:white;
   position: absolute;
   border-radius: 100%;
   left:-10.5px;
@@ -252,10 +279,7 @@ background-color:#Eaeaea ;
   align-items: center;
   justify-content: center;
 }
-.fnct-btn span{
-  color:black;
 
-}
 .fnct .fas {
   padding-right:2em
 }
@@ -266,8 +290,11 @@ background-color:#Eaeaea ;
   color:black;
 }
 .restaurant{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   width:100%;
-  height: 1227px;
+  height: 1278px;
   background: #f6f6f6;
 }
 .restaurant--grid{
@@ -279,6 +306,7 @@ background-color:#Eaeaea ;
 }
 .restaurant--cards{
   display: flex;
+  position: relative;
   flex-direction: column;
   height:250px;
   width:100%;
@@ -291,6 +319,19 @@ background-color:#Eaeaea ;
   border-radius: 2em 2em 0 0;
   object-fit: cover;
   height:174px;
+}
+.new {
+  display: flex;
+  position: absolute;
+  background: #99e2d0;
+  color: #008766;
+  font-weight: 500;
+  width: 5em;
+  height: 1.9em;
+  justify-content: center;
+  align-items: center;
+  right: 12.5px;
+  top: 12.5px;
 }
 .bandeau{
   display: flex;
@@ -328,6 +369,34 @@ background-color:#Eaeaea ;
 
 
 }
+@media (min-width:700px){
+  main{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:1fr 1fr,
+  } 
+  .localisation{
+    grid-column:span 2;
+  }
+  .presentation{
+    grid-column:1;
+    grid-row:2;
+    height:100%;
+  }
+  .fonctionnement{
+    grid-column: 2;
+
+  }
+  .restaurant{
+    grid-column:span 2;
+    height:700px;
+  }
+  .restaurant--grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+}
+
 
 
   
