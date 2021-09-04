@@ -3,6 +3,7 @@ body {
   padding: 0;
   font-family: "Roboto", sans-serif;
 }
+/*polices*/
 a{
   text-decoration: none;
   color:black;
@@ -22,6 +23,8 @@ h4{
 .section-title{
   margin-left:20px;
 }
+/*********************************/
+/*animation loader*/
 @keyframes loader{
   
 
@@ -42,17 +45,17 @@ h4{
   }
   10%{
   
-    transition: scale 2s,background-color 2s ;
+    transition:2s;
     border: 1px solid #281c5e;
     background: #662e14 no-repeat center;
     
     object-fit: cover;
     opacity: 0.75;
-    scale:0.9;
+    transform: scale(0.9);
     z-index: 1000000;
   }
   25%{
-    transition: width 1s,height 1s ,background-color 1s ;
+    transition:1s ;
       
     transform: rotate(10deg);
     object-fit: cover;
@@ -69,7 +72,7 @@ h4{
       
     transform: rotate(25deg);
     opacity: 0.75;
-    transition: scale 1s,height 1s ,background-color 1s ;
+    transition: 1s ;
     transform-origin: left;
     transform: scale(0.3);
       
@@ -81,10 +84,10 @@ h4{
   75%{
     
     
-    transform:rotate(320deg);
+    transform:rotate(320deg) scale(0.8);
     opacity:0.5;
-    transition: scale 1s,height 1s ,background-color 1s ;
-    transform:scale 0.8;
+    transition: 1s;
+    
     
     
     background:#FF79DA no-repeat center;
@@ -96,7 +99,7 @@ h4{
     
     border-radius:30%;
     opacity:0.3;
-    transition: scale 1s,height 1s ,background-color 1s ;
+    transition: 1s ;
     transform: scale(1);
     transform-origin: center;
     
@@ -117,7 +120,7 @@ h4{
 
   
 }
-
+/*loader*/
 
 .loader {
   display:flex;
@@ -149,6 +152,7 @@ h4{
                        "footer"
                       ;
 }
+/*header homepage*/
 .main-header{
   grid-area: header;
   display: grid;
@@ -227,7 +231,7 @@ background-color:#Eaeaea ;
 .presentation_btn:hover
 {
   transform: scale(1.1);
-  transition:box-shadow 0.5s scale 0.5s opacity 0.5s;
+  transition:0.5s;
   opacity: 0.9;
   box-shadow: 0 0 0.8em black;
 }
@@ -259,7 +263,7 @@ background-color:#Eaeaea ;
   box-shadow: 0 0 1em #a5a3a3;
 }
 .fnct-btn:hover{
-  transition: background-color 0.5s color 0.5s;
+  transition:0.5s;
   background-color:#f5edff;
   color:#9356dc;
   
@@ -312,6 +316,11 @@ background-color:#Eaeaea ;
   width:100%;
   background:white;
   border-radius: 2em;
+  box-shadow:#8080800a 0 0.3em 0 ;
+}
+.restaurant--cards:hover{
+  transform: scale(1.02);
+  transition: 0.5s;
 }
 
 .restaurant--cards img{
@@ -319,6 +328,17 @@ background-color:#Eaeaea ;
   border-radius: 2em 2em 0 0;
   object-fit: cover;
   height:174px;
+}
+@keyframes nouveau
+{
+  1%{
+    opacity:1;
+    transition: 2s;
+  }
+  100%{ 
+  opacity:0;
+  transition:2s;
+  }
 }
 .new {
   display: flex;
@@ -332,6 +352,7 @@ background-color:#Eaeaea ;
   align-items: center;
   right: 12.5px;
   top: 12.5px;
+  animation: nouveau 4s infinite;
 }
 .bandeau{
   display: flex;
@@ -354,33 +375,31 @@ background-color:#Eaeaea ;
 }
 .coeur1{
   position:absolute;
-  font-size:12.5px;
+  font-size: 8px;
   opacity:0;
-  color:#aa5edc;
+  color: transparent;
+  background: linear-gradient(40deg, #e471da 5%, #a65ddc 95%);
+  -webkit-background-clip: text;
   
 
 }
 .coeur1:hover{
  
-  transition:opacity 1s, font-size 1.2s;
+  transition:1.2s;
   opacity:1;
-  font-size:26px;
-  
+  transform: scale(3);
 
-
-}
+  }
 @media (min-width:700px){
-  main{
+  main {
     display:grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows:1fr 1fr,
   } 
   .localisation{
     grid-column:span 2;
   }
   .presentation{
     grid-column:1;
-    grid-row:2;
     height:100%;
   }
   .fonctionnement{
