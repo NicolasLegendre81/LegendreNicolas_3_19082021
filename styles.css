@@ -30,94 +30,60 @@ h4{
 
   
   0%{
-    
-    
-    opacity: 1;
+     opacity: 1;
     background: #b90ea3 no-repeat center;
-    
     object-fit: cover;
     height: 100%;
     width:100%;
     z-index: 1000000;
-
-    
-  
   }
   10%{
   
     transition:2s;
     border: 1px solid #281c5e;
     background: #662e14 no-repeat center;
-    
-    object-fit: cover;
     opacity: 0.75;
     transform: scale(0.9);
     z-index: 1000000;
   }
   25%{
     transition:1s ;
-      
     transform: rotate(10deg);
     object-fit: cover;
     opacity: 0.80;
-      
-   
-   background:lightcoral no-repeat center;
-   
-   object-fit: cover;
-   z-index: 1000000;
+    background:lightcoral no-repeat center;
+    z-index: 1000000;
   }
   45%{
-      
-      
-    transform: rotate(25deg);
+    transform: scale(0.3) rotate(25deg);
     opacity: 0.75;
     transition: 1s ;
     transform-origin: left;
-    transform: scale(0.3);
-      
-    
+    width: 100%;
+    border-radius: 100%;
     background:blueviolet no-repeat center;
-    
     z-index: 1000000;
   }
   75%{
-    
-    
     transform:rotate(320deg) scale(0.8);
     opacity:0.5;
+    transform-origin: right;
     transition: 1s;
-    
-    
-    
     background:#FF79DA no-repeat center;
-    
-    object-fit: cover;
     z-index: 1000000;
   }
   99%{
-    
-    border-radius:30%;
     opacity:0.3;
     transition: 1s ;
     transform: scale(1);
     transform-origin: center;
-    
-    
     background:blue no-repeat center;
-    
-    object-fit: cover;
     z-index: 1000000;
-  
-    
   }
+
   100%{z-index: -1;
     opacity: 0;
-
   }
-  
-  
-
   
 }
 /*loader*/
@@ -126,21 +92,15 @@ h4{
   display:flex;
   justify-content: center;
   align-items: center;
-  
-  margin:0;
   width:100%;
+  padding:1em;
   height: 100%;
-  transition-delay: 5s;
   overflow: hidden;
   position:fixed;
-  animation: loader  7s cubic-bezier(1,-0.93, 0, 1.57) ;
+  animation: loader  6s cubic-bezier(1,-0.9, 1, 1.5);
   animation-fill-mode:forwards;
   z-index: 1000000;
-  
-  
 }
-
-
 
 
 #acceuil{
@@ -162,22 +122,15 @@ h4{
   position:relative;
 }
   
-      
 .logo{
   display:flex;
   justify-content:center;
   margin:auto;
   grid-column: 2/3;
   width:100%;
-
-  
-  
-
 }
 .logo img{
 width:10.2em;
-
-
 }
 
 main{
@@ -192,8 +145,8 @@ align-items:center;
 justify-content: center;
 height:3.5em;
 background-color:#Eaeaea ;
-  
 }
+
 .localisation div{
   display:flex;
   align-items:center;
@@ -237,10 +190,7 @@ background-color:#Eaeaea ;
   box-shadow: 0 0 0.8em black;
 }
 .fonctionnement{
-  
-  width:100%;
-  
-  
+   width:100%;
 }
 
 .grid-fnct {
@@ -267,9 +217,7 @@ background-color:#Eaeaea ;
   transition:0.5s;
   background-color:#f5edff;
   color:#9356dc;
-  
 }
-
 
 .fnct-btn span {
   display: flex;
@@ -307,8 +255,8 @@ background-color:#Eaeaea ;
   grid-template-columns: 1fr;
   grid-gap:20px;
   margin: 20px;
-
 }
+
 .restaurant--cards{
   display: flex;
   position: relative;
@@ -377,21 +325,52 @@ background-color:#Eaeaea ;
 }
 .coeur1{
   position:absolute;
-  font-size: 8px;
+  font-size: 8.4px;
   opacity:0;
   color: transparent;
   background: linear-gradient(40deg, #e471da 5%, #a65ddc 95%);
   -webkit-background-clip: text;
-  
+}
+
+.coeur1:hover{
+ transition:1s;
+ opacity:1;
+ transform: scale(3);
+}
+
+
+footer{
+  display: flex;
+  flex-direction:column;
+  width: 100%;
+  background:#353535;
+  padding-bottom:2em;
 
 }
-.coeur1:hover{
- 
-  transition:1.2s;
-  opacity:1;
-  transform: scale(3);
-
-  }
+.footer--logo{
+  display:flex;
+  align-items:center;
+  margin:2em;
+  margin-bottom:1em
+}
+.footer--logo img{
+  filter:invert(100%);
+  width:6.6em
+ }
+  
+footer nav{
+  display:flex;
+  flex-direction:column;
+  margin-left:2em;
+}
+footer a{
+  color:white;
+  margin-bottom:0.5em;
+  font-size:13px;
+}
+footer .fas{
+  margin-right:0.5em;
+}
 @media (min-width:700px){
   main {
     display:grid;
@@ -406,7 +385,6 @@ background-color:#Eaeaea ;
   }
   .fonctionnement{
     grid-column: 2;
-
   }
   .restaurant{
     grid-column:span 2;
@@ -415,8 +393,21 @@ background-color:#Eaeaea ;
   .restaurant--grid{
     grid-template-columns:1fr 1fr;
   }
+  .footer--logo{
+    justify-content:center;
+    margin-left:0;
+
+  }
+  
+  .footer-nav{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+
+  }
 
 }
+
 
 
 
