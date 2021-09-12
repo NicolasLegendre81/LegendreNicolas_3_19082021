@@ -391,42 +391,7 @@ footer a{
 footer .fas{
   margin-right:0.5em;
 }
-@media (min-width:700px){
-  main {
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-  } 
-  .localisation{
-    grid-column:span 2;
-  }
-  .presentation{
-    grid-column:1;
-    height:100%;
-  }
-  .fonctionnement{
-    grid-column: 2;
-  }
-  .restaurant{
-    grid-column:span 2;
-    height:700px;
-  }
-  .restaurant--grid{
-    grid-template-columns:1fr 1fr;
-  }
-  .footer--logo{
-    justify-content:center;
-    margin-left:0;
 
-  }
-  
-  .footer-nav{
-  display:flex;
-  flex-direction:row;
-  justify-content:space-around;
-
-  }
-
-}
 .menu_main{
   display:grid;
   grid-template-columns:1fr;
@@ -492,7 +457,7 @@ footer .fas{
   overflow: hidden;
   
   cursor: pointer;
-  }
+}
   .plat-name{
   display: flex;
   white-space: nowrap;
@@ -501,19 +466,19 @@ footer .fas{
   text-overflow: ellipsis;
   overflow: hidden;
   
-  }
-  .plat-name p{
+}
+.plat-name p{
    overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  }
-  .plat-price{
+}
+.plat-price{
   
    margin-left:auto;
    margin-top:2em;
    margin-right:1.5em;
-  }
-  .checked{
+}
+.checked{
     display:flex;
     background:#99e2d0;
     width:3em;
@@ -525,49 +490,104 @@ footer .fas{
     transition:0.4s;
     
     
-    }
-  .checked i{
+}
+.checked i{
     color:white;
     font-size: 20px;
 
-  }
-  .plat-btn:hover .checked{
+}
+.plat-btn:hover .checked{
 
     transform:translateX(-4em);
     transition:0.4s;
     margin-left:3em;
 
 
-  }
+}
    .plat-btn:hover .checked i{
      transform:rotate(360deg);
      transition:0.6s;
-   }
+}
    .commander{
     display:flex;
     align-items:center;
     justify-content:center
   
-  }
-  @keyframes apparition{
-    0%{
+}
+@keyframes apparition{
+  0%{
       opacity:0;
-      transform:translateY(3em);
+      transform:translateY(1.5em);
+      transition:0.8s ;
     
     }
     100%{
       opacity:1;
       transform:translateY(0);
     }
-  }
-  .entrees>*:not(.plat-title){
-    animation:apparition 0.5s ease-in-out forwards ;
+}
+.entrees>*:not(.plat-title){
+    animation:apparition 2s ease-in-out forwards ;
+    opacity: 0;
   }
   .plats>*:not(.plat-title){
-    animation:apparition 0.8s ease-in-out forwards ;
+    animation:apparition 2s 1.5s ease-in-out forwards ;
+    opacity:0;
+    
 
   }
   .desserts>*:not(.plat-title){
-    animation:apparition 1s ease-in-out forwards ;
+    animation:apparition 2s 2s ease-in-out forwards ;
+    opacity: 0;
+
+}
+@media (min-width:700px){
+  main {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+  } 
+  .localisation{
+    grid-column:span 2;
+  }
+  .presentation{
+    grid-column:1;
+    height:100%;
+  }
+  .fonctionnement{
+    grid-column: 2;
+  }
+  .restaurant{
+    grid-column:span 2;
+    height:700px;
+  }
+  .restaurant--grid{
+    grid-template-columns:1fr 1fr;
+  }
+  .footer--logo{
+    justify-content:center;
+    margin-left:0;
 
   }
+  
+  .footer-nav{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+
+  }
+  .plats-container{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+  }
+  .commander{
+    grid-column:2;
+  }
+  .menu_main 
+  {
+    grid-template-rows: 280px 20px 500px;
+  }
+  .menu{
+    height:520px;
+  }
+
+}
