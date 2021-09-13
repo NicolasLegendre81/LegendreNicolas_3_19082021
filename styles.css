@@ -121,7 +121,7 @@ h4{
   box-shadow: 0 0 0.5em #28252570;
   position:relative;
 }
-/*ajout fléche  retour header restaurants*/
+/*ajout flÃ©che  retour header restaurants*/
 .header-restau{
   grid-column:1/2;
   display:flex;
@@ -167,7 +167,7 @@ background-color:#Eaeaea ;
 .localisation i{
   margin-right: 1em;
 }
-/*section présentation homepage */
+/*section prÃ©sentation homepage */
 .presentation{
   display: flex;
   flex-direction: column;
@@ -395,7 +395,7 @@ footer .fas{
 .menu_main{
   display:grid;
   grid-template-columns:1fr;
-  grid-template-rows:280px 20px 1140px;
+
 }
 .menu-img{
   
@@ -408,8 +408,8 @@ footer .fas{
    object-fit: cover;
  }
 .menu
-{
-  height:1160px;
+{margin-top:-20px;
+  /* heght:1160px; */
   width: 100%;
   background: #f6f6f6;
   border-radius:1.5em 1.5em 0 0;
@@ -468,6 +468,12 @@ footer .fas{
   text-overflow: ellipsis;
   overflow: hidden;
   
+}
+.plat-name h4{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
 }
 .plat-name p{
    overflow: hidden;
@@ -584,12 +590,6 @@ footer .fas{
   .commander{
     grid-column:2;
   }
-  .menu_main 
-  {
-    grid-template-rows: 280px 20px 500px;
-  }
-  .menu{
-    height:520px;
-  }
+
 
 }
