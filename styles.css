@@ -3,7 +3,7 @@ body {
   padding: 0;
   font-family: 'Roboto', sans-serif;
 }
-/*polices*/
+/*fonts*/
 a{
   text-decoration: none;
   color:black;
@@ -121,7 +121,7 @@ h4{
   box-shadow: 0 0 0.5em #28252570;
   position:relative;
 }
-/*ajout flÃ©che  retour header restaurants*/
+/*ajout fleche  retour header restaurants*/
 .header-restau{
   grid-column:1/2;
   display:flex;
@@ -164,10 +164,12 @@ background-color:#Eaeaea ;
   font-size:16px;
   font-weight: 400;
 }
+
 .localisation i{
   margin-right: 1em;
 }
-/*section prÃ©sentation homepage */
+
+/*section presentation homepage */
 .presentation{
   display: flex;
   flex-direction: column;
@@ -178,6 +180,7 @@ background-color:#Eaeaea ;
   background-color: #FAFAFA;
   height: 290px;
 }
+
 .presentation_btn{
   display: flex;
   justify-content: center;
@@ -195,16 +198,16 @@ background-color:#Eaeaea ;
   transition:0.5s;
   cursor: pointer;
 }
-.presentation_btn:hover
-{
+
+.presentation_btn:hover{
   transform: scale(1.1);
   transition:0.5s;
   filter:brightness(1.1) drop-shadow( 0px 0px  grey);
-  
 }
-/*fonctionnement du site page d'acceuil*/
+
+/* section fonctionnement du site page d'acceuil*/
 .fonctionnement{
-   width:100%;
+  width:100%;
 }
 
 .grid-fnct {
@@ -212,8 +215,8 @@ background-color:#Eaeaea ;
   grid-template-columns: 1fr;
   grid-gap:20px;
   margin: 30px;
-
 }
+
 .fnct-btn{
   display: flex;
   flex-direction: row;
@@ -228,6 +231,7 @@ background-color:#Eaeaea ;
   box-shadow: 0 0 1em #a5a3a3;
   cursor: pointer;
 }
+
 .fnct-btn:hover{
   transition:0.5s;
   background-color:#f5edff;
@@ -251,12 +255,15 @@ background-color:#Eaeaea ;
 .fnct .fas {
   padding-right:2em
 }
+
 .fnct strong{
   color:black;
 }
+
 .fnct strong:hover{
   color:black;
 }
+
 /*section restaurants page d'acceuil*/
 .restaurant{
   display: flex;
@@ -266,6 +273,7 @@ background-color:#Eaeaea ;
   height: 1278px;
   background: #f6f6f6;
 }
+
 .restaurant--grid{
   display: grid;
   grid-template-columns: 1fr;
@@ -285,6 +293,7 @@ background-color:#Eaeaea ;
   transition: 0.5s;
   cursor:pointer;
 }
+
 .restaurant--cards:hover{
   transform: scale(1.02);
   transition: 0.5s;
@@ -296,6 +305,7 @@ background-color:#Eaeaea ;
   object-fit: cover;
   height:174px;
 }
+
 /*animation post-it new des cartes restaurants homepage*/
 @keyframes nouveau
 {
@@ -308,7 +318,7 @@ background-color:#Eaeaea ;
   transition:2s;
   }
 }
-/**/
+
 .new {
   display: flex;
   position: absolute;
@@ -329,6 +339,7 @@ background-color:#Eaeaea ;
   justify-content: space-between;
   align-items: center;
 }
+/*bandeau texte des cartes restaurants de la page d'acceuil*/
 .restau--name{
   margin-left:1.5em;
   margin-top:0.5em;
@@ -340,8 +351,8 @@ background-color:#Eaeaea ;
   justify-content:center;
   align-items:center;
   margin-right:0.5em;
-  
 }
+
 .coeur1{
   position:absolute;
   font-size: 8.4px;
@@ -358,62 +369,71 @@ background-color:#Eaeaea ;
  transform: scale(3);
 }
 
-
+/**/
+/*footer commun a toutes les pages*/
 footer{
   display: flex;
   flex-direction:column;
   width: 100%;
   background:#353535;
   padding-bottom:2em;
-
 }
+
 .footer--logo{
   display:flex;
   align-items:center;
   margin:2em;
   margin-bottom:1em
 }
+
 .footer--logo img{
   filter:invert(100%);
   width:6.6em
- }
+}
   
 footer nav{
   display:flex;
   flex-direction:column;
   margin-left:2em;
 }
+
 footer a{
   color:white;
   margin-bottom:0.5em;
   font-size:13px;
 }
+
 footer .fas{
   margin-right:0.5em;
 }
 
+/*pages menus*/
 .menu_main{
   display:grid;
   grid-template-columns:1fr;
-
 }
+
+/*photo*/
 .menu-img{
-  
   height: 300px;
   overflow: hidden;
  }
- .menu-img img{
-   height:100%;
-   width:100%;
-   object-fit: cover;
- }
+
+.menu-img img{
+  height:100%;
+  width:100%;
+  object-fit: cover;
+}
+/**/
+ 
 .menu
-{margin-top:-20px;
-  /* heght:1160px; */
+{ margin-top:-20px;
   width: 100%;
   background: #f6f6f6;
   border-radius:1.5em 1.5em 0 0;
 }
+
+/*nom du restaurant*/
 .menu__name{
   font-family: Shrikhand;
   display: flex;
@@ -421,12 +441,14 @@ footer .fas{
   font-size:1em;
   margin-left:1em;
   margin-top: 1em;
-  
 }
+
 .menu__name .restaurant__heart{
   position:absolute;
   right:1em;
 }
+
+/*plats*/
 .plat-title{
   margin-left: 0.5em;
   color: #4c4c4c;
@@ -434,14 +456,13 @@ footer .fas{
   border-bottom: 4px solid #99e2d0;
   width: 2.5em;
   padding-bottom: 5px;
-
 }
+
 .grid-plat{
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 10px;
   margin: 10px;
-
 }
 
 .plat-btn{
@@ -457,9 +478,9 @@ footer .fas{
   position: relative;
   box-shadow: 0 0 1em #a5a3a3;
   overflow: hidden;
-  
   cursor: pointer;
 }
+
   .plat-name{
   display: flex;
   white-space: nowrap;
@@ -467,61 +488,62 @@ footer .fas{
   margin-left:1em;
   text-overflow: ellipsis;
   overflow: hidden;
-  
 }
+
 .plat-name h4{
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-
 }
+
 .plat-name p{
-   overflow: hidden;
+  overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
 .plat-price{
-  
-   margin-left:auto;
-   margin-top:2em;
-   margin-right:1.5em;
+  margin-left:auto;
+  margin-top:2em;
+  margin-right:1.5em;
 }
+
+/*animation des plats au survol*/
 .checked{
-    display:flex;
-    background:#99e2d0;
-    width:3em;
-    height:100%;
-    justify-content:center;
-    align-items:center;
-    padding:0.5em;
-    margin-right:-4em;
-    transition:0.4s;
-    
-    
+  display:flex;
+  background:#99e2d0;
+  width:3em;
+  height:100%;
+  justify-content:center;
+  align-items:center;
+  padding:0.5em;
+  margin-right:-4em;
+  transition:0.4s;   
 }
+
 .checked i{
-    color:white;
-    font-size: 20px;
-
+  color:white;
+  font-size: 20px;
 }
+
 .plat-btn:hover .checked{
-
-    transform:translateX(-4em);
-    transition:0.4s;
-    margin-left:3em;
-
-
+  transform:translateX(-4em);
+  transition:0.4s;
+  margin-left:3em;
 }
-   .plat-btn:hover .checked i{
-     transform:rotate(360deg);
-     transition:0.6s;
+
+.plat-btn:hover .checked i{
+  transform:rotate(360deg);
+  transition:0.6s;
 }
-   .commander{
-    display:flex;
-    align-items:center;
-    justify-content:center
+/**/
+.commander{
+  display:flex;
+  align-items:center;
+  justify-content:center
   
 }
+/*animation au chargement des menus*/
 @keyframes apparition{
   0%{
       opacity:0;
@@ -535,20 +557,20 @@ footer .fas{
     }
 }
 .entrees>*:not(.plat-title){
-    animation:apparition 2s ease-in-out forwards ;
-    opacity: 0;
+  animation:apparition 2s ease-in-out forwards ;
+  opacity: 0;
   }
-  .plats>*:not(.plat-title){
-    animation:apparition 2s 1.5s ease-in-out forwards ;
-    opacity:0;
+.plats>*:not(.plat-title){
+  animation:apparition 2s 1.5s ease-in-out forwards ;
+  opacity:0;
     
 
-  }
-  .desserts>*:not(.plat-title){
-    animation:apparition 2s 2s ease-in-out forwards ;
-    opacity: 0;
-
 }
+.desserts>*:not(.plat-title){
+  animation:apparition 2s 2s ease-in-out forwards ;
+  opacity: 0;
+}
+
 @media (min-width:700px){
   main {
     display:grid;
